@@ -15,10 +15,6 @@ int main(){
   u_t max = std::numeric_limits<int>::max();
   while (std::cin >> a){
     std::cin >> c >> b;
-    if (a > max || b > max || c > max || a*a > max || b*b > max || c*c > max){
-      std::cerr << "overflow btw";
-      return 2;
-    }
     count += isPyth(a,b,c) ? 1 : 0;
     c = b;
     b = a;
